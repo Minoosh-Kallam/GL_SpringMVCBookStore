@@ -1,11 +1,13 @@
+<%@ page isELIgnored ="false" %> 
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Edit Book Details</title>
-    <link rel="stylesheet" href="resources/css/login.css">
+    <link rel="stylesheet" href="../../resources/css/login.css">
   </head>
   <body>
-    <form action="books/${book.bookId}" method="post">
+    <form action="/SpringMVCDemo/books/${book.bookId}" method="post">
       <h2>Edit Book</h2>
       <label for="title">Book Id:</label>
       <input type="text" id="bookId" name="bookId" value=${book.bookId} class="inputField" readonly>
@@ -23,7 +25,7 @@
       <input type="text" id="price" name="price" value=${book.price} class="inputField" >
       
       <input type="submit" value="Edit Book" class="submitForm">
-      <a href="home" class="cancelForm"  > Cancel </a>
+      <a href="/SpringMVCDemo/home" class="cancelForm"  > Cancel </a>
     </form>
   </body>
 </html>

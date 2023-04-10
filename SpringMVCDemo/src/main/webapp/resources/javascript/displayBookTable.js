@@ -35,7 +35,7 @@ function displayBookTable(tableId, books){
 					cell.title = "view book";
 					cell.onclick = function(){
 					 	bookId = books[row.rowIndex-1].id;
-						window.location.assign("http://localhost:8080/books/"+bookId);
+						window.location.assign("http://localhost:8080/SpringMVCDemo/books/"+bookId);
 					};
 					cell.style.width = "0%";
 					cell.innerHTML = " <img src=\"https://cdn-icons-png.flaticon.com/512/159/159604.png\" width='20px' height='20px' />" ;
@@ -45,7 +45,7 @@ function displayBookTable(tableId, books){
 						cell.title = "edit book"
 						cell.onclick = function(){
 					 		bookId = books[row.rowIndex-1].id;
-							window.location.assign("http://localhost:8080/books/edit/"+bookId);
+							window.location.assign("http://localhost:8080/SpringMVCDemo/books/edit/"+bookId);
 						};
 						cell.style.width = "0%";
 						cell.innerHTML = " <img src=\"https://cdn-icons-png.flaticon.com/512/1827/1827933.png\" width='20px' height='20px' />" ;
@@ -54,7 +54,7 @@ function displayBookTable(tableId, books){
 						cell.title = "delete book";
 						cell.onclick = function(){
 							bookId = books[row.rowIndex-1].id;
-							fetch("http://localhost:8080/books/"+bookId , {method:"DELETE"})
+							fetch("http://localhost:8080/SpringMVCDemo/books/"+bookId , {method:"DELETE"})
 								.then(res => res)
 								.then(res => {
 									alert(res);

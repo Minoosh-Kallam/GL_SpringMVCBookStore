@@ -1,11 +1,13 @@
+<%@ page isELIgnored ="false" %> 
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Add Book Page</title>
-    <link rel="stylesheet" type="text/css" href="../login.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/login.css">
   </head>
   <body>
-    <form action="admin/addBook" method="post">
+    <form action="/SpringMVCDemo/admin/addBook" method="post">
       <h2>Enter Book details</h2>
       <label for="title">Book Title:</label>
       <input type="text" id="title" name="title" class="inputField" required>

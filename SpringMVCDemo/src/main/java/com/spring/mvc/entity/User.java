@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,10 +38,10 @@ public class User {
 	@Column(name="role")
 	private String role;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER )
 	private List<Book> likedBooks;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER )
 	private List<Book> wishList;
 	
 	
@@ -73,10 +74,10 @@ public class User {
 					likedUsers: "#likedUsers#",
 					wishList: "#wishList#"
 				}
-				""".replace("#UserId#", ""+UserId)
+				""".replace("#UserId#", ""+userId)
 				.replace("#name#", name != null ? name : "")
 				.replace("#email#", email != null ? email : "")
-				.replace("#UserName#", userName != null ? userName : "")
+				.replace("#userName#", userName != null ? userName : "")
 				.replace("#password#", password != null ? password : "")
 				.replace("#likedUsers#", likedBooks != null ? likedBooks.toString() : "[]")
 				.replace("#wishList#", wishList != null ? wishList.toString() : "[]")

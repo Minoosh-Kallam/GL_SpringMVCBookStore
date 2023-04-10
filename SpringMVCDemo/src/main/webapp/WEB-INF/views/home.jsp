@@ -1,3 +1,5 @@
+<%@ page isELIgnored ="false" %> 
+
 <html>
 	<head>
     	<link rel="stylesheet" type="text/css" href="resources/css/login.css">
@@ -30,15 +32,15 @@
 		<nav>
   <ul>
     <li><a href="/home">Home</a></li>
-    <li id = "register" class="nav-button"><a href="/register">Register</a></li>
-    <li id= "login" class="nav-button"><a href="/login">Login</a></li>
-    <li id= "profile" class="nav-button"><a href="/profile" id= "username"></a></li>
-    <li id="logout"><a href="/logout">Logout</a></li>
+    <li id = "register" class="nav-button"><a href="register">Register</a></li>
+    <li id= "login" class="nav-button"><a href="login">Login</a></li>
+    <li id= "profile" class="nav-button"><a href="profile" id= "username"></a></li>
+    <li id="logout"><a href="logout">Logout</a></li>
   </ul>
 </nav>
 
 	<div class="flexbox">
-		<a href="/admin/addBook" id="addBook"> Add Book </a>
+		<a href="admin/addBook" id="addBook"> Add Book </a>
 		
 		<div class="searchBar">
 			<label style="margin-bottom: 0px" for="searchBy">Search by: </label>
@@ -101,7 +103,7 @@
 				const searchValue = document.getElementById("searchValue").value;
 				
 				
-				let url = new URL("http://localhost:8080/books")
+				let url = new URL("http://localhost:8080/SpringMVCDemo/books")
 				url.searchParams.append("searchBy", searchBy)
 				url.searchParams.append("searchValue", searchValue)
 				url = url.toString();

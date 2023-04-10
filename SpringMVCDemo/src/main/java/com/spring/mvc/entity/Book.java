@@ -33,10 +33,10 @@ public class Book {
 	
 	private float price;
 	
-	@ManyToMany(mappedBy = "wishList", cascade = CascadeType.REMOVE )
+	@ManyToMany(mappedBy = "wishList", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER )
 	private List<User> watchLaterUsers;
 	
-	@ManyToMany(mappedBy = "likedBooks" , cascade = {CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REFRESH})
+	@ManyToMany(mappedBy = "likedBooks" , cascade = {CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.EAGER )
 	private List<User> likedUsers;
 	
 	public String toString() {

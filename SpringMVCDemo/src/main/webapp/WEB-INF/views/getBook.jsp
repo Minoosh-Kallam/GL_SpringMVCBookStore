@@ -1,23 +1,25 @@
+<%@ page isELIgnored ="false" %> 
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Book Details</title>
-    <link rel="stylesheet" href="/login.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/navbar.css">
+    <link rel="stylesheet" href="../resources/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/navbar.css">
   </head>
   <body>
   
   <nav>
   <ul>
-    <li><a href="home">Home</a></li>
-    <li id = "register" class="nav-button"><a href="register">Register</a></li>
-    <li id= "login" class="nav-button"><a href="login">Login</a></li>
-    <li id= "profile" class="nav-button"><a href="profile" id= "username"></a></li>
-    <li id="logout"><a href="logout">Logout</a></li>
+    <li><a href="/SpringMVCDemo/home">Home</a></li>
+    <li id = "register" class="nav-button"><a href="/SpringMVCDemo/register">Register</a></li>
+    <li id= "login" class="nav-button"><a href="/SpringMVCDemo/login">Login</a></li>
+    <li id= "profile" class="nav-button"><a href="/SpringMVCDemo/profile" id= "username"></a></li>
+    <li id="logout"><a href="/SpringMVCDemo/logout">Logout</a></li>
   </ul>
 </nav>
   	
-    <form action="books/edit/${book.bookId}" method="get" >
+    <form action="/SpringMVCDemo/books/edit/${book.bookId}" method="get" >
       <button type="button" onclick="manageFav()"><img id="like"  width="20px" height="20px" /></button>
       <button type="button" onclick="manageWatchLater()"><img id="Watch_Later"  width="20px" height="20px" /></button>
       
@@ -44,7 +46,7 @@
       <input type="submit" id="submit_edit_book" value="Edit Book" class="submitForm">
       <input type="button" value="Back" class="submitForm" onclick="history.go(-1)" >
     </form>
-    <script src="resources/css/navbar.js" ></script>
+    <script src="../resources/javascript/navbar.js" ></script>
     <script>
     
     	const username = "${username}";
