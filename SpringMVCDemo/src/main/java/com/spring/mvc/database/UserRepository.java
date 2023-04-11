@@ -48,12 +48,13 @@ public class UserRepository {
 		Session session = factory.openSession();
 		session.getTransaction().begin();
 		
-		session.save(user);
+		session.saveOrUpdate(user);
 		 
 		session.getTransaction().commit();
 		session.close();
 		return user;
 	}
+	
 	
 	public void deleteById(int userId) {
 		Session session = factory.openSession();

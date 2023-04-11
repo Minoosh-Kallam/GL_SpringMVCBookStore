@@ -80,16 +80,14 @@ public class UserService {
 		user.getLikedBooks().add(book);
 		book.getLikedUsers().add(user);
 		
+		System.out.println(user.getLikedBooks());
+		System.out.println(book.getLikedUsers());
+		
 		userRepository.save(user);
 		bookRepository.save(book);
 	}
 	public void removeFromFav(int userid, int bookId) {
-		User user = userRepository.findById(userid);
-		Book book = bookRepository.findById(bookId);
-		
-		user.removeBookFromFav(book);
-		userRepository.save(user);
-		bookRepository.save(book);
+		bookRepository.undoLike(userid, bookId);
 		
 	}
 	public void addToWatchLater(int userId, int bookId) {
@@ -104,14 +102,7 @@ public class UserService {
 		
 	}
 	public void removeFromWatchLater(int userId, int bookId) {
-		User user = userRepository.findById(userId);
-		Book book = bookRepository.findById(bookId);
-		
-		user.getWishList().remove(book);
-		book.getWatchLaterUsers().remove(user);
-		
-		userRepository.save(user);
-		bookRepository.save(book);
+		bookRepository.undoWatchLater(userId, bookId);
 	}
 	
 	public List<Book> getLikedBooks(int BookId) {

@@ -71,7 +71,7 @@
     		uri = uri + ( isLiked ? "remove" : "add") ;
     		console.log(uri);
     		
-    		fetch("http://localhost:8080"+uri , {method : "get"})
+    		fetch("http://localhost:8080/SpringMVCDemo"+uri , {method : "get"})
     			.then(res => res)
     			.then(res => {
     				console.log(res.status)
@@ -87,7 +87,7 @@
     		uri = uri + (isWatchLater ? "remove" : "add") ;
     		console.log(uri);
     		
-    		fetch("http://localhost:8080"+uri , {method : "get"})
+    		fetch("http://localhost:8080/SpringMVCDemo"+uri , {method : "get"})
     			.then(res => res)
     			.then(res => {
     				console.log(res.status)
