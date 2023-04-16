@@ -31,7 +31,7 @@
 	<body>
 		<nav>
   <ul>
-    <li><a href="/home">Home</a></li>
+    <li><a href="/SpringMVCDemo/home">Home</a></li>
     <li id = "register" class="nav-button"><a href="register">Register</a></li>
     <li id= "login" class="nav-button"><a href="login">Login</a></li>
     <li id= "profile" class="nav-button"><a href="profile" id= "username"></a></li>

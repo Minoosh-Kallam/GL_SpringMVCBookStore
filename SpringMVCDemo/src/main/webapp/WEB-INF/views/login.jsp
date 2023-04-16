@@ -19,7 +19,6 @@
       <input type="password" id="password" name="password" class="inputField" required>
       <input type="text" id="role" name="name" value="role" style="display: none" >
       <input type="submit" value="Login" class="submitForm">
-      <input type="button" value="Cancel" class="cancelForm" />
     </form>
     <p> New user? <a href="register"> Register here</a> </p>
     <p> click here to signin as <a href="home"> guest</a> </p>
