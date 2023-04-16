@@ -15,4 +15,4 @@ To like a book or add to watch later, click on the eye option in home screen to 
 
 You can search a book by its name, publisher, id, price in home screen. To sort a list of books. Please click on the column header, It will be sorted and the column header will turn to blue.
 
-
+To check on the liked/read later books, click on the profile(which contains username) button in navigation bar
