@@ -11,4 +11,8 @@ http://localhost:8080/SpringMVCDemo/register
 http://localhost:8080/SpringMVCDemo/home
 
 
-To like a book or add to watch later, click on the eye option in home screen to go to check book details.
+To like a book or add to watch later, click on the eye option in home screen to go to check book details. Then you you will get 2 buttons for like and read later.
+
+You can search a book by its name, publisher, id, price in home screen. To sort a list of books. Please click on the column header, It will be sorted and the column header will turn to blue.
+
+
